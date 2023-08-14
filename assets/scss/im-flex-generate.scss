@@ -1,0 +1,31 @@
+:root{
+    --im-content-padding: 10px;
+    --im-row-margin: calc(var(var(--im-content-padding) * -1));
+}
+$contentPadding: var(--im-content-padding);
+$rowMargin: var(--im-row-margin);
+.container{
+    padding-left: $contentPadding;
+    padding-right: $contentPadding;
+}
+.row{
+    margin-left: $rowMargin;
+    margin-right: $rowMargin;
+}
+@mixin imFlexGenerate($flexible, $media, $screen){
+    @media (max-width:#{$media}){
+        @for $i from 1 through $flexible{
+            .im-flex-#{$screen}-#{$i}{
+                flex: 0 0 calc(100% / $flexible * $i );
+                padding-left: $contentPadding;
+                padding-right: $contentPadding;
+            }
+        }
+    }
+}
+
+@include imFlexGenerate(6,1920,xl);
+@include imFlexGenerate(6,1500,md);
+@include imFlexGenerate(6,992,sm);
+@include imFlexGenerate(3,480,xs);
+@include imFlexGenerate(53,1953,rz);

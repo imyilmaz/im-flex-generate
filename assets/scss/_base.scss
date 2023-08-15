@@ -1,5 +1,13 @@
 $contentPadding: var(--im-content-padding);
 $rowMargin: var(--im-row-margin);
+*{ 
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; 
+    &::selection{ 
+        background: transparent; 
+    }
+}
+body{ margin: 0; padding: 0; }
 .container{
     padding-left: $contentPadding;
     padding-right: $contentPadding;

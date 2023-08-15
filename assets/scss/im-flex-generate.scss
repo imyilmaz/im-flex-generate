@@ -2,7 +2,7 @@
 @import 'base';
 
 @mixin imFlexGenerate($flexible, $media, $screen){
-    @media (max-width:#{$media}){
+    @media (max-width:#{$media}px){
         @for $i from 1 through $flexible{
             .im-flex-#{$screen}-#{$i}{
                 flex: 0 0 calc(100% / $flexible * $i );

@@ -3,8 +3,12 @@ $rowMargin: var(--im-row-margin);
 .container{
     padding-left: $contentPadding;
     padding-right: $contentPadding;
-}
-.row{
-    margin-left: $rowMargin;
-    margin-right: $rowMargin;
+    >.row{
+        margin-left: $rowMargin;
+        margin-right: $rowMargin;
+        >*{
+            padding-left: $contentPadding;
+            padding-right: $contentPadding;
+        }
+    }
 }

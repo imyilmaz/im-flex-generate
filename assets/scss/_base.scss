@@ -9,6 +9,8 @@ $rowMargin: var(--im-row-margin);
 }
 body{ margin: 0; padding: 0; }
 .container{
+    width: 100%; 
+    max-width: 1920px;
     padding-left: $contentPadding;
     padding-right: $contentPadding;
     >.row{

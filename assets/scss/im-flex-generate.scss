@@ -1,17 +1,6 @@
-:root{
-    --im-content-padding: 10px;
-    --im-row-margin: calc(var(var(--im-content-padding) * -1));
-}
-$contentPadding: var(--im-content-padding);
-$rowMargin: var(--im-row-margin);
-.container{
-    padding-left: $contentPadding;
-    padding-right: $contentPadding;
-}
-.row{
-    margin-left: $rowMargin;
-    margin-right: $rowMargin;
-}
+@import 'root';
+@import 'base';
+
 @mixin imFlexGenerate($flexible, $media, $screen){
     @media (max-width:#{$media}){
         @for $i from 1 through $flexible{

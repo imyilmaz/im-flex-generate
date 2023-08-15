@@ -1,0 +1,10 @@
+$contentPadding: var(--im-content-padding);
+$rowMargin: var(--im-row-margin);
+.container{
+    padding-left: $contentPadding;
+    padding-right: $contentPadding;
+}
+.row{
+    margin-left: $rowMargin;
+    margin-right: $rowMargin;
+}

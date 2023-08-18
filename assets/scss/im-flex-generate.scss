@@ -1,21 +1,17 @@
 @import 'root';
 @import 'base';
 
-@mixin imFlexGenerate($flexible, $media, $screen){
+@mixin imFlexGenerate($flexible,$media,$screen){
     @media (max-width:#{$media}px){
         @for $i from 1 through $flexible{
-            .im-flex-#{$screen}-#{$i}{
-                flex: 0 0 calc(100% / $flexible * $i ); 
-                max-width: calc(100% / $flexible * $i );
-                padding-left: $contentPadding;
-                padding-right: $contentPadding;
+            .col-#{$screen}-#{$i}{
+                display: block;
+                flex: 0 0 calc(100% / $flexible * $i);
+                max-width: calc(100% / $flexible * $i);
             }
         }
     }
-}
+} 
 
-@include imFlexGenerate(12,1920,xl);
-@include imFlexGenerate(9,1500,md);
-@include imFlexGenerate(8,992,sm);
-@include imFlexGenerate(5,480,xs);
-@include imFlexGenerate(53,1953,rz);  
+@include imFlexGenerate(20,1920,xl);
+@include imFlexGenerate(12,1920,md);

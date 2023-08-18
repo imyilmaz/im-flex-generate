@@ -1,5 +1,6 @@
 @import 'root';
 @import 'base';
+@import 'prism';
 
 @mixin imFlexGenerate($flexible,$media,$screen){
     @media (max-width:#{$media}px){

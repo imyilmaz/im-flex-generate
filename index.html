@@ -6,7 +6,33 @@
     <title>İbrahim Mesut Yılmaz</title>
     <link rel="stylesheet" href="assets/scss/im-flex-generate.css">
 </head>
-<body> 
+<body>
+    <div class="head">
+        <h1>imFlexGenerate</h1>
+    </div>
+    <pre>
+        <code class="language-scss">
+    
+    // $flexible    : col sayısı
+    // $media      : ekran genişliği
+    // $screen     : ekran adı (xl,lg,md,sm,xs) vs.
+    
+    @mixin imFlexGenerate($flexible,$media,$screen){
+        @media (max-width:#{$media}px){
+            @for $i from 1 through $flexible{
+                .col-#{$screen}-#{$i}{
+                    flex: 0 0 calc(100% / $flexible * $i);
+                    max-width: calc(100% / $flexible * $i);
+                }
+            }
+        }
+    } 
+
+    // örneklerde kullanılan '@include' lar
+    @include imFlexGenerate(20,1920,xl);
+    @include imFlexGenerate(12,1920,md);
+        </code>
+    </pre>
     <div class="container">
         <h1>ÖZEL</h1>
         <div class="row">
@@ -263,5 +289,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/jquery-library.js"></script>
+    <script src="assets/js/prism.js"></script>
 </body>
 </html>

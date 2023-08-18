@@ -70,6 +70,13 @@ body{
     overflow-x: hidden; 
     background: var(--bg-body);
 }
+.head{
+    h1{ 
+        font-size: 5vw;
+        padding: 20px; 
+        text-align: center;
+    }
+}
 .container{
     width: 100%; 
     max-width: 1920px;

@@ -146,6 +146,16 @@ h1 {
   right: 0;
 }
 
+.footer h6 {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.footer h6 a {
+  display: block;
+  color: var(--color-head);
+}
+
 code[class*=language-],
 pre[class*=language-] {
   color: #f8f8f2;
